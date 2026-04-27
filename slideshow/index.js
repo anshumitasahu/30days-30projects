@@ -21,7 +21,7 @@ document.querySelectorAll(".dot").forEach((dot, index) => {
 
 function showSlides(a) {
     const imageSlide = document.getElementsByClassName("slide");
-    const dotElement = document.querySelectorAll(".dot");
+    const dotElement = document.getElementsByClassName("dot");
 
 
 
