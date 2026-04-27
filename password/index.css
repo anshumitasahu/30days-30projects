@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: bisque */
+}
+
+body {
+    background-color: rgb(75, 2, 144);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+.input_box {
+    background-color: #fff;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 30px;
+}
+
+
+.input_box input {
+    font-size: 18px;
+    border: 0;
+    outline: 0;
+}
