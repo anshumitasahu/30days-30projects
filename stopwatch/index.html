@@ -4,21 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stopwatch</title>
+    <title>stopwatch</title>
     <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
-    <div class="watch-body">
-        <div type="number" class="watch">
-
-        </div>
+    <div class="stopwatch">
+        <h1 class="display">00:00:00</h1>
         <div class="bttns">
-            <button class="start" onclick="start()">Start</button>
-            <button class="stop" onclick="stop()">Stop</button>
+            <img src="img/stop-fill.svg" onclick="stop()">
+            <img src="img/play-fill.svg" class="play-btn" onclick="start()">
+            <img src="img/arrow-counter-clockwise-fill.svg" onclick="reset()">
         </div>
     </div>
 </body>
 <script src="index.js"></script>
-
 </html>

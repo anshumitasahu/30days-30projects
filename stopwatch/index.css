@@ -1,59 +1,54 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    /* border: 1px solid indianred; */
+    box-sizing: border-box;
+    /* border: 2px solid rebeccapurple; */
 }
 
 body {
+    background: #958ebd;
     height: 100vh;
     width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(236, 236, 236, 0.788);
+    overflow: hidden;
+
 }
 
-.watch-body {
-    background-color: white;
-    border-radius: 30px;
-    padding: 30px;
-    border: 2px solid #ddd;
-}
-
-.watch {
-    padding: 10px;
-    font-size: 30px;
+.stopwatch {
+    width: 90%;
+    max-width: 600px;
+    background-image:
+        linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url("img/techfest poster.jpeg");
+    background-size: cover;
+    background-position: center;
     text-align: center;
-    margin: 10px;
-    /* background: #a6a2a2; */
-    /* background: linear-gradient(0deg, rgba(166, 162, 162, 0.86) 0%, rgba(242, 240, 240, 0.8) 100%, rgba(212, 210, 210, 0.94) 51%); */
-    border-radius: 30px;
-    border: 1px solid rgba(128, 122, 122, 0.397);
+    padding: 40px 0;
+    color: #fff;
+    margin: 200px auto 0;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+.stopwatch h1 {
+    margin-top: 60px;
+    font-size: 64px;
+    font-family: "Playwrite DE SAS", cursive;
+    font-weight: 300;
+    font-style: normal;
+    padding: 20px;
 }
 
 .bttns {
     display: flex;
-    gap: 15px;
-    padding: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
-button {
-    font-size: 24px;
-    padding: 10px 20px;
-    border-radius: 10px;
-    background: #9b9be0;
-    background: linear-gradient(0deg, rgba(155, 155, 224, 1) 0%, rgba(79, 70, 250, 1) 99%, rgba(112, 112, 212, 1) 43%);
-    border: none;
-    color: white;
-    opacity: 0.9;
-}
-
-button:hover {
+.bttns img{
+    margin: 0 20px;
     cursor: pointer;
 }
 
-button:active{
-    opacity: 1;
+.play-btn {
+    width: 50px;
+    /* border: 5px solid red; */
 }
