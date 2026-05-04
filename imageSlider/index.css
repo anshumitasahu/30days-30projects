@@ -10,6 +10,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: linear-gradient(rgba(147, 205, 255, 0.124), rgba(42, 81, 116, 0.416));
 }
 
 .gallery {
@@ -30,7 +31,6 @@ body {
 }
 
 .image {
-    background-color: red;
-    width: 100px;
-    height: 100px;
+    width: fit-content;
+    height: fit-content;
 }
