@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e1f4fd;
+}
+
+.imgBox {
+    width: 70%;
+    margin: auto;
+    background-image: url(./img/trans.jpg);
+    position: relative;
+    overflow: hidden;
+}
+
+.imgBox img {
+    width: 90%;
+    height: auto;
+    display: block;
+}
+
+.imgwrap {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: hidden;
+}
+
+.imgwrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}

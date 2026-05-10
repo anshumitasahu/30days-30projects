@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        border: 1px solid red
+    }
+
+    .buttons {
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .buttons button {
+        background-color: #333;
+        color: white;
+        outline: none;
+        border: 0;
+        padding: 10px 15px;
+        border-radius: 10px;
+    }
+
+    .toast-box {
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .toast {
+        background-color: #ddd;
+        width: 400px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+
+    }
+</style>
+
+<body>
+    <div class="buttons">
+        <button onclick="showToast(successMsg)">success</button>
+        <button onclick="showToast(errorMsg)">error</button>
+        <button onclick="showToast(invalidMsg)">invalid</button>
+    </div>
+    <div class="toast-box">
+
+    </div>
+</body>
+<script src="./index.js"></script>
+
+</html>
