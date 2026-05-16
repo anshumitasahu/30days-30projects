@@ -1,0 +1,128 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
+body {
+    overflow: hidden;
+}
+
+.game-container {
+    background: url(./img/game-bg5.webp);
+    background-repeat: repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+.dino {
+    background: url(./img/dino2.png);
+    background-size: cover;
+    height: 225px;
+    width: 248px;
+    position: absolute;
+    bottom: 0;
+    left: 20px;
+}
+
+.obstacle {
+    background: url(./img/dragon2.png);
+    background-size: cover;
+    height: 200px;
+    width: 320px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.animateDino {
+    animation: dino 1s forwards;
+}
+
+.obstaclesAni {
+    animation: obstaclesAni 3s forwards infinite;
+}
+
+.game-over {
+    position: relative;
+    font-size: 65px;
+    text-align: center;
+    font-family: 'Press Start 2P', "Courier New", Courier, monospace;
+    color: rgb(67, 67, 67);
+    font-weight: 600;
+    visibility: hidden;
+}
+
+.after_over {
+    position: relative;
+    font-size: 35px;
+    text-align: center;
+    font-family: 'Press Start 2P', "Courier New", Courier, monospace;
+    color: rgb(67, 67, 67);
+    font-weight: 600;
+}
+
+.after-game {
+    position: relative;
+    font-size: 35px;
+    text-align: center;
+    visibility: hidden;
+}
+
+.start-again {
+    outline: 0;
+    border: 0;
+    background-color: rgba(151, 151, 151, 0.278);
+    padding: 10px 15px;
+    border-radius: 999px;
+    margin: 10px;
+}
+
+.start-again:hover {
+    cursor: pointer;
+}
+
+.scoreCount {
+    position: relative;
+    padding: 20px;
+    font-size: 22px;
+    text-align: right;
+}
+
+@keyframes dino {
+    0% {
+        bottom: 0;
+    }
+
+    50% {
+        bottom: 400px;
+    }
+
+    75% {
+        bottom: 300px
+    }
+
+    85% {
+        bottom: 100px
+    }
+
+    90% {
+        bottom: 50px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes obstaclesAni {
+    0% {
+        left: 100vw;
+    }
+
+    100% {
+        left: -400px;
+    }
+}

@@ -8,17 +8,18 @@
 body {
     width: 100vw;
     height: 100vh;
-    background-color: #aaa;
+    background-color: #6e6c6c;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .container {
-    padding: 5px;
-    background: #000000;
-    box-shadow: 8px 5px 5px 2px #fff;
+    padding: 10px 20px;
+    background: #000000d7;
+    box-shadow: 6px 5px 2px 0 #5252525a;
     color: #fff;
+    /* width: 350px; */
 }
 
 .menu {
@@ -46,16 +47,21 @@ body {
     width: inherit;
     height: inherit;
     border-radius: 999px;
+    padding: 20px;
 }
 
-audio {
-    background-color: #aaa;
+input[type = "range"] {
+    width: 300px;
 }
 
 .music-buttons {
-    padding: 5px;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+    gap: 25px;
+}
+
+.music-buttons img {
+    width: 40px;
 }

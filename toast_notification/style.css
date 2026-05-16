@@ -1,0 +1,51 @@
+ * {
+        /* border: 1px solid red */
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        /* background-color: rgba(0, 0, 0, 0.748); */
+        background-image: url(./img/bg2.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .buttons {
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .buttons button {
+        background-color: #d1d1d1;
+        color: rgb(0, 0, 0);
+        outline: none;
+        border: 0;
+        padding: 10px 15px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .toast-box {
+        position: absolute;
+        bottom: 30px;
+        right: 30px;
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .toast {
+        background-color: #fff;
+        width: 400px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        border-radius: 30px;
+        padding: 10px 20px;
+    }
