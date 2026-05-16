@@ -7,11 +7,11 @@
 body {
     height: 100vh;
     width: 100vw;
-    background-color: blue;
+    background-color: rgb(255, 253, 253);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
 }
 
 .input {
