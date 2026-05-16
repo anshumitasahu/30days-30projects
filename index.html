@@ -1,57 +1,427 @@
-<a href="./bmi-calculator/index.html"> first bmi calcculator </a>
-<br> 
-<a href="./calculator/index.html">Basic calculator</a>
-<br>
-<a href="./stopwatch/index.html">basic stopwatch</a>
-<br>
-<a href="./slideshow/index.html">Basic carousel</a>
-<br>
-<a href="./temperature-converter/index.html">Basic Temperature Converter</a>
-<br>
-<a href="./portfolio/index.html">Basic POrtfolio</a>
-<br>
-<a href="./popup/index.html">Popup portal</a>
-<br>
-<a href="./password/index.html">Password entry</a>
-<br>
-<a href="./modal/index.html">modal</a>
-<br>
-<a href="./order-page/index.html">Oder Page (basic)</a>
-<br>
-<a href="./select-dropdown/index.html"> basic dropdown</a>
-<br>
-<a href="./calender/index.html"> Basic know today's calender</a>
-<br>
-<a href="./clock/index.html">Basic clock</a>
-<br>
-<a href="./progress_bar/index.html">Small Animated Progess bar</a>
-<br>
-<a href="./passwordGenerator/index.html">Password Generator</a>
-<br>
-<a href="./paswordStrength/index.html">Password Strength</a>
-<br>
-<a href="./ageCalculator/index.html">Age Calculator</a>
-<br>
-<a href="./imageSlider/index.html">Image Slider</a>
-<br>
-<a href="./calculator2/index.html">Calculator 2</a>
-<br>
-<a href="./backgroudRemover/index.html">Background Remover</a>
-<br>
-<a href="./notes/index.html">Notes</a>
-<br>
-<a href="./to-dos/index.html">TO-DOs</a>
-<br>
-<a href="./toast_notification/index.html">Toast Notification</a>
-<br>
-<a href="./qr-code/index.html">QR-Code Generator</a>
-<br>
-<a href="./quiz/index.html">Quiz</a>
-<br>
-<a href="./musicPlayer/index.html">Music Player</a>
-<br>
-<a href="./cryptoWebPage/index.html">Crypto sell and buy weeb page</a>
-<br>
-<a href="./weather-app/index.html">Weather Forecast</a>
-<br>
-<a href="./game-dino/index.html">Dino Run Game</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>30 Days 30 Projects Challenge</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins', sans-serif;
+        }
+
+        body{
+            background:
+            radial-gradient(circle at top left,#1e3a8a,#020617 60%);
+            color:white;
+            min-height:100vh;
+            overflow-x:hidden;
+        }
+
+        .confetti{
+            position:fixed;
+            width:10px;
+            height:10px;
+            top:-10px;
+            animation:fall linear infinite;
+            opacity:0.8;
+            z-index:0;
+        }
+
+        @keyframes fall{
+            to{
+                transform:translateY(110vh) rotate(720deg);
+            }
+        }
+
+        .hero{
+            position:relative;
+            z-index:2;
+            text-align:center;
+            padding:80px 20px 50px;
+        }
+
+        .hero h1{
+            font-size:4rem;
+            font-weight:700;
+            background:linear-gradient(to right,#60a5fa,#c084fc);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+            margin-bottom:20px;
+        }
+
+        .hero p{
+            color:#cbd5e1;
+            max-width:700px;
+            margin:auto;
+            line-height:1.8;
+            font-size:1.1rem;
+        }
+
+        .stats{
+            margin-top:40px;
+            display:flex;
+            justify-content:center;
+            gap:25px;
+            flex-wrap:wrap;
+        }
+
+        .stat-box{
+            background:rgba(255,255,255,0.08);
+            backdrop-filter:blur(10px);
+            border:1px solid rgba(255,255,255,0.1);
+            padding:20px 35px;
+            border-radius:20px;
+            min-width:180px;
+            box-shadow:0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .stat-box h2{
+            font-size:2.5rem;
+            color:#60a5fa;
+        }
+
+        .stat-box p{
+            margin-top:5px;
+            color:#d1d5db;
+        }
+
+        .container{
+            position:relative;
+            z-index:2;
+            max-width:1300px;
+            margin:50px auto;
+            padding:20px;
+
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+            gap:25px;
+        }
+
+        .category{
+            background:rgba(255,255,255,0.06);
+            border:1px solid rgba(255,255,255,0.08);
+            backdrop-filter:blur(12px);
+
+            border-radius:24px;
+            padding:25px;
+
+            transition:0.3s ease;
+            box-shadow:0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .category:hover{
+            transform:translateY(-8px);
+            border-color:#60a5fa;
+        }
+
+        .category h2{
+            margin-bottom:20px;
+            font-size:1.5rem;
+            color:#93c5fd;
+        }
+
+        ul{
+            list-style:none;
+        }
+
+        li{
+            margin:14px 0;
+        }
+
+        a{
+            text-decoration:none;
+            color:#f8fafc;
+            font-size:0.98rem;
+            transition:0.25s ease;
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+            padding:12px 15px;
+            border-radius:12px;
+            background:rgba(255,255,255,0.04);
+        }
+
+        a:hover{
+            background:#2563eb;
+            transform:translateX(5px);
+        }
+
+        .project-number{
+            opacity:0.5;
+            font-size:0.85rem;
+        }
+
+        footer{
+            text-align:center;
+            padding:40px 20px 60px;
+            color:#94a3b8;
+            position:relative;
+            z-index:2;
+        }
+
+        .challenge{
+            margin-top:15px;
+            color:#60a5fa;
+            font-weight:600;
+        }
+
+        @media(max-width:768px){
+
+            .hero h1{
+                font-size:2.5rem;
+            }
+
+            .stat-box{
+                width:100%;
+                max-width:280px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- CONFETTI -->
+    <script>
+        for(let i = 0; i < 120; i++){
+
+            let confetti = document.createElement("div");
+            confetti.classList.add("confetti");
+
+            confetti.style.left = Math.random() * 100 + "vw";
+
+            confetti.style.animationDuration =
+            (Math.random() * 3 + 3) + "s";
+
+            confetti.style.background =
+            `hsl(${Math.random() * 360},100%,50%)`;
+
+            confetti.style.width =
+            confetti.style.height =
+            Math.random() * 8 + 4 + "px";
+
+            document.body.appendChild(confetti);
+        }
+    </script>
+
+    <!-- HERO SECTION -->
+
+    <section class="hero">
+
+        <h1>30 Days • 30 Projects</h1>
+
+        <p>
+            A focused frontend development challenge consisting of
+            JavaScript, HTML, and CSS projects built continuously
+            across 30 days to improve logic building, UI engineering,
+            DOM manipulation, animations, APIs, and frontend architecture.
+        </p>
+
+        <div class="stats">
+
+            <div class="stat-box">
+                <h2>31</h2>
+                <p>Total Projects</p>
+            </div>
+
+            <div class="stat-box">
+                <h2>30</h2>
+                <p>Challenge Days</p>
+            </div>
+
+            <div class="stat-box">
+                <h2>HTML • CSS • JS</h2>
+                <p>Core Stack</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+
+    <section class="container">
+
+        <!-- CALCULATORS -->
+
+        <div class="category">
+
+            <h2>Calculators & Utilities</h2>
+
+            <ul>
+
+                <li><a href="./bmi-calculator/index.html">BMI Calculator <span class="project-number">#1</span></a></li>
+
+                <li><a href="./calculator/index.html">Basic Calculator <span class="project-number">#2</span></a></li>
+
+                <li><a href="./calculator2/index.html">Calculator 2 <span class="project-number">#3</span></a></li>
+
+                <li><a href="./temperature-converter/index.html">Temperature Converter <span class="project-number">#4</span></a></li>
+
+                <li><a href="./ageCalculator/index.html">Age Calculator <span class="project-number">#5</span></a></li>
+
+                <li><a href="./weather-app/index.html">Weather Forecast <span class="project-number">#6</span></a></li>
+
+                <li><a href="./qr-code/index.html">QR Code Generator <span class="project-number">#7</span></a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- UI -->
+
+        <div class="category">
+
+            <h2>UI Components</h2>
+
+            <ul>
+
+                <li><a href="./popup/index.html">Popup <span class="project-number">#8</span></a></li>
+
+                <li><a href="./modal/index.html">Modal <span class="project-number">#9</span></a></li>
+
+                <li><a href="./select-dropdown/index.html">Dropdown <span class="project-number">#10</span></a></li>
+
+                <li><a href="./toast_notification/index.html">Toast Notification <span class="project-number">#11</span></a></li>
+
+                <li><a href="./progress_bar/index.html">Progress Bar <span class="project-number">#12</span></a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- MEDIA -->
+
+        <div class="category">
+
+            <h2>Media & Interactive</h2>
+
+            <ul>
+
+                <li><a href="./slideshow/index.html">Slideshow <span class="project-number">#13</span></a></li>
+
+                <li><a href="./imageSlider/index.html">Image Slider <span class="project-number">#14</span></a></li>
+
+                <li><a href="./musicPlayer/index.html">Music Player <span class="project-number">#15</span></a></li>
+
+                <li><a href="./txt2speech_converter/index.html">Text To Speech <span class="project-number">#16</span></a></li>
+
+                <li><a href="./backgroudRemover/index.html">Background Remover <span class="project-number">#17</span></a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- PRODUCTIVITY -->
+
+        <div class="category">
+
+            <h2>Productivity</h2>
+
+            <ul>
+
+                <li><a href="./notes/index.html">Notes App <span class="project-number">#18</span></a></li>
+
+                <li><a href="./to-dos/index.html">To-Do App <span class="project-number">#19</span></a></li>
+
+                <li><a href="./to-do-list/index.html">To-Do List <span class="project-number">#20</span></a></li>
+
+                <li><a href="./quiz/index.html">Quiz App <span class="project-number">#21</span></a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- PASSWORD -->
+
+        <div class="category">
+
+            <h2>Password Tools</h2>
+
+            <ul>
+
+                <li><a href="./password/index.html">Password Entry <span class="project-number">#22</span></a></li>
+
+                <li><a href="./passwordGenerator/index.html">Password Generator <span class="project-number">#23</span></a></li>
+
+                <li><a href="./paswordStrength/index.html">Password Strength <span class="project-number">#24</span></a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- TIME -->
+
+        <div class="category">
+
+            <h2>Time & Date</h2>
+
+            <ul>
+
+                <li><a href="./clock/index.html">Clock <span class="project-number">#25</span></a></li>
+
+                <li><a href="./stopwatch/index.html">Stopwatch <span class="project-number">#26</span></a></li>
+
+                <li><a href="./calender/index.html">Calendar <span class="project-number">#27</span></a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- WEB -->
+
+        <div class="category">
+
+            <h2>Web Pages</h2>
+
+            <ul>
+
+                <li><a href="./portfolio/index.html">Portfolio <span class="project-number">#28</span></a></li>
+
+                <li><a href="./order-page/index.html">Order Page <span class="project-number">#29</span></a></li>
+
+                <li><a href="./cryptoWebPage/index.html">Crypto Web Page <span class="project-number">#30</span></a></li>
+
+            </ul>
+
+        </div>
+
+        <!-- GAME -->
+
+        <div class="category">
+
+            <h2>Games</h2>
+
+            <ul>
+
+                <li><a href="./game-dino/index.html">Dino Run Game <span class="project-number">#31</span></a></li>
+
+            </ul>
+
+        </div>
+
+    </section>
+
+    <footer>
+
+        <h2>Frontend Development Challenge</h2>
+
+        <p class="challenge">
+            Result of consistent daily execution and iterative learning.
+        </p>
+
+    </footer>
+
+</body>
+</html>
